@@ -1,7 +1,8 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 :root {
   --main-font: Regular;
-  --accent-font: 'IBM Plex Mono';
+  --accent-font: 'IBM Plex Mono', monospace;
+  --rec-color: #FF0070;
 }
 
 .page {
@@ -19,6 +20,15 @@
 /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */ 
 }
 
+.decorated-zone::before,
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inline-size: 25px;
+  block-size: 25px;
+}
+
 .header {
   flex-direction: column;
   justify-content: center;
@@ -28,19 +38,79 @@
   grid-template-columns: 97vw;
 } 
 
+.bord-left {
+  width: 25.038px;
+  height: 24.999px;
+}
+
+.bord-right {
+  width: 25.038px;
+  height: 24.999px;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+
 .dark {
   margin-bottom: 86px;
+}
+ 
+.rec {
+  position: absolute;
+  z-index: 1;
+}
+
+.rec::before {
+  content: "rec";
+  text-transform: uppercase;
+  line-height: 25px;
+  font-weight: 400;
+}
+
+.rec::after {
+  content: "";
+  border-radius: 50%;
+  width: 9px;
+  height: 9px;
+  display: inline-block;
+}
+
+.header-title {
+  font-family: var(--accent-font);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.5%;
+  text-shadow: 4px 4px 0px var(--text-title-color);
+  font-family: var(--accent-font);
+} 
+
+.section-intro__text {
+  font-family: var(--accent-font);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23.4px;
+  margin-bottom: 20px;
+  text-decoration:none;
+}
+
+.section-intro__head-title {
+  font-family: var(--accent-font);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px;
 }
 
 .header__theme-menu-item{
   text-align: center;
-  font-family: 'IBM Plex Mono';
+  font-family: var(--accent-font);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
 }
-
 
 .header__theme-menu-button:hover {
   border: 1px solid var(--text-title-color);
@@ -54,6 +124,12 @@
   min-height: 71px;
   max-height: 117px;
   justify-self: right;
+  font-family: var(--accent-font);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28.4px;
+  
 }
 
 .section-intro {
@@ -61,6 +137,24 @@
   flex-wrap: wrap;
   margin-top: 20px;
 }
+
+.title-intro {
+  font-family: var(--accent-font);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px; 
+}
+
+.title-content {
+  display: flex;
+  font-family: var(--accent-font);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23.4px;
+}
+
 
 .main-intro {
   max-width: 650px;
@@ -70,7 +164,20 @@
 .section-intro__head {
   margin-bottom: 20px;
   margin-top: 30px;
+  font-family: var(--accent-font);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px; 
 }
+
+.section-intro__text {
+  font-family: var(--accent-font);
+  font-size: 18px;
+  font-style: normal;
+  line-height: 23.4px; 
+}
+
 
 .main-content-cover {
   display: flex;
@@ -80,6 +187,22 @@
 
 .title {
   margin-bottom: 10px;
+  display: flex;
+  font-family: var(--accent-font);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px; 
+}
+
+.title_color {
+  margin-bottom: 10px;
+  display: flex;
+  font-family: var(--accent-font);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px; 
 }
 
 .title-one {
@@ -98,7 +221,7 @@
 }
 
 .section-cover__text {
-  font-family: 'IBM Plex Mono';
+  font-family: var(--accent-font);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -109,6 +232,7 @@
 .content-section {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .img-title {
@@ -183,20 +307,17 @@
   margin-top: 357px;
 }
 
+.footer-title {
+  font-family: var(--accent-font);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.5%; 
+}
+
 .main-content {
   display: flex;
   flex-direction: column;
 }
-
-/* 
-.one {
-  background-image: url(./images/sunset.png);
-  background-size: 375px ;
-} */
-
-
-
-
 
 @media screen and (width: 1024px) {
   .dark {

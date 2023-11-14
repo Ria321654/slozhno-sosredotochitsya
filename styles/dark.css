@@ -1,14 +1,5 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 
 .page.theme_dark {
-   /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя */
   --bg-color: #000028;
   --title-color:#DB00FF;
   --bg-image: url(../images/cover-image-dark.png);
@@ -18,21 +9,25 @@
   --accent-title-color: #FF0070;
   --bg-title-color:#FF0070;
   --rec-color: #FF0070;
+  --main-color: #353430;
+  --title-main-color: #000028;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color:#000028;
-    --title-color: #DB00FF;
-    --bg-image: url(../images/cover-image-dark.png);
-    --text-color: #F1B2CE;
-    --text-title-color: #FF0070; 
-    --accent-color: #FF0070; 
-    --rec-color: #FF0070;
-    --decor-none: none;
-    --rec-decor-visibility: hidden;
-  }
+
+:root {
+  --bg-color:#000028;
+  --title-color: #DB00FF;
+  --bg-image: url(../images/cover-image-dark.png);
+  --accent-color: #FF0070; 
+  --text-color: #F1B2CE;
+  --text-title-color: #FF0070; 
+  --decor-none: none;
+  --rec-decor-visibility: hidden;
+  --accent-title-color: #FF0070;
+  --rec-color: #FF0070;
+  --main-color: #353430;
 }
+
 
 .page.theme_dark {
  color: var(--text-color);
@@ -44,45 +39,33 @@
   background-image: url(../images/cover-image-dark.png); 
 }
 
-
+.rec {
+  color: var(--rec-color);
+}
+.rec::after {
+  background-color: var(--rec-color);
+  box-shadow: 0 0 2px 2px var(--rec-color);
+}
 
 .header-title {
   color: var(--text-color);
-  text-shadow: 4px 4px 0px var(--text-title-color);
-  font-family: 'IBM Plex Mono';
-  font-style: normal;
-  font-weight: 700;
-  line-height: 82.5%; 
+
 }
 
 .header-text {
-  color: #353430;
-  font-family: 'IBM Plex Mono';
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 28.4px;
+  color: var(--main-color);
   background: var(--accent-color);
 }
 
 .bord-right {
   border-bottom: 1px solid var(--text-title-color);
   border-left: 1px solid var(--text-title-color);
-  width: 25.038px;
-  height: 24.999px;
-  display: flex;
-  flex-direction: row;
+
 }
 
 .title {
-  color: #353430;
-  font-family: 'IBM Plex Mono';
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 23.4px; 
+  color: var(--text-title-color);
   background-color: var(--bg-title-color);
-  display: flex;
 }
 
 .text {
@@ -92,7 +75,7 @@
  .section-intro__text {
   color: var(--text-color);
   text-shadow: 2px 2px var(--bg-color-light);
-  text-decoration:none;
+
 }
 
 .section-intro__text a {
@@ -133,20 +116,26 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 25px; /* 138.889% */
+  line-height: 25px; 
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 769px) {
   .rec {
-    margin-left: -72px;
-    margin-top: 5px;
+    margin-right: 10px;
+  }  
+}
+
+@media screen and (min-width: 1024px) {
+  .rec {
+    margin-left: 923px;
   }  
 }
 
 @media screen and (max-width: 376px) {
   .rec {
-    margin-top: -20px;
-    margin-left: 273px;
+    margin-top: -24px;
+    margin-left: 299px;
+
   }
 }
 
