@@ -25,8 +25,6 @@
   content: "";
   position: absolute;
   z-index: 0;
-  inline-size: 25px;
-  block-size: 25px;
 }
 
 .header {
@@ -35,7 +33,7 @@
   align-items: center;
   flex-shrink: 0;
   display: grid;
-  grid-template-columns: 97vw;
+  grid-template-columns: 100vw;
 } 
 
 .bord-left {
@@ -48,12 +46,12 @@
   height: 24.999px;
   display: flex;
   flex-direction: row;
-  
+  margin-left: 19px;  
 }
 
 
 .dark {
-  margin-bottom: 86px;
+  margin-bottom: 82px;
 }
  
 .rec {
@@ -117,8 +115,18 @@
   color: var(--text-title-color);
 }
 
+.title_color {
+  margin-bottom: 10px;
+  display: flex;
+  font-family: var(--accent-font);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px; 
+}
+
 .header-text {
-  margin-bottom: 77px;
+  margin-bottom: 91px;
   min-width: 355px;
   max-width: 491px;
   min-height: 71px;
@@ -128,8 +136,8 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  line-height: 28.4px;
-  
+  margin-right: 21px;
+  margin-top: 6px;
 }
 
 .section-intro {
@@ -195,15 +203,7 @@
   line-height: 23.4px; 
 }
 
-.title_color {
-  margin-bottom: 10px;
-  display: flex;
-  font-family: var(--accent-font);
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 23.4px; 
-}
+
 
 .title-one {
   display: flex;
@@ -322,6 +322,8 @@
 @media screen and (width: 1024px) {
   .dark {
     display: flex;
+    margin-left: 15px;
+    margin-top: 12px;
   }
 }
 
@@ -329,14 +331,15 @@
   .dark {
     display: flex;
     justify-content: flex-end;
-    margin-right: 10px;
+    margin-right: 20px;
+    margin-top: 6px;
   }
 }
 
 @media screen and (min-width:375px) {
   .left {
-    display: flex;
-    justify-content: flex-end;  }
+    margin-left: 340px;
+  }
 } 
 
 @media screen and (min-width:1024px) {
@@ -386,6 +389,7 @@
 @media screen and (max-width: 376px) {
   .header-title {
     margin-top: 101px;
+    margin-left: 11px;
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 }
@@ -408,9 +412,9 @@
 @media screen and (max-width:769px) {
   .header-text {
     width: 364px;
-    height: 117px;
-    margin-top: 76px;
-    margin-bottom: 140px;
+    height: 116px;
+    margin-top: 57px;
+    margin-right: 11px;
   }
 }
 @media screen and (max-width:376px) {
@@ -423,7 +427,8 @@
 
 @media screen and (max-width: 376px) {
   .bord-right {
-    margin-top: -108px;
+    margin-top: -59px;
+    margin-left: 10px;
   }
 }
 
@@ -550,7 +555,7 @@
   }
 }
 
-@media screen and (max-width:1024px){
+@media screen and (min-width:1024px){
   .main-title__two {
     width: 315px;
     height: 361px;
@@ -564,7 +569,7 @@
   }
 }
 
-@media screen and (max-width:1024px){
+@media screen and (min-width:1024px){
   .main-title__tree {
     width: 315px;
     height: 431px;
