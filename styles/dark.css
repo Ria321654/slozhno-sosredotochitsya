@@ -14,38 +14,15 @@
 }
 
 
-:root {
-  --bg-color:#000028;
-  --title-color: #DB00FF;
-  --bg-image: url(../images/cover-image-dark.png);
-  --accent-color: #FF0070; 
-  --text-color: #F1B2CE;
-  --text-title-color: #FF0070; 
-  --decor-none: none;
-  --rec-decor-visibility: hidden;
-  --accent-title-color: #FF0070;
-  --rec-color: #FF0070;
-  --main-color: #353430;
-}
 
 
 .page.theme_dark {
  color: var(--text-color);
   background-color: var(--bg-color, #000028 ); 
   background-image: url(../images/cover-image-dark.png);
-  background-repeat: no-repeat;
-  background-position:left 40% center;
-  background-size:cover;
-  background-image: url(../images/cover-image-dark.png); 
+
 }
 
-.rec {
-  color: var(--rec-color);
-}
-.rec::after {
-  background-color: var(--rec-color);
-  box-shadow: 0 0 2px 2px var(--rec-color);
-}
 
 .header-title {
   color: var(--text-color);
@@ -83,78 +60,23 @@
   text-decoration:none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.header__theme-menu-button :focus {
-  border-bottom: 2px solid var(--text-title-color);
-  border-top: none;
-  border-left: none;
-  border-right: none;
-}
-
-.header__theme-menu-button:hover {
-  border: 1px solid var(--text-title-color);
-  color:var(--text-title-color);
-}
-
 .rec {
   color: var(--rec-color);
 
 }
 
-@media screen and (max-width: 376px) {
-  .rec {
-    margin-left: 299px;
-  }
-}
-
-@media screen and (max-width: 769px) {
-  .rec {
-    margin-right: 22px;
-  }  
-}
-
-@media screen and (min-width: 1024px) {
-  .rec {
-    margin-right: 21px;
-  }  
+.rec::after {
+  background-color: var(--rec-color);
+  box-shadow: 0 0 2px 2px var(--rec-color);
 }
 
 
-
-@media screen and (min-width: 768px) {
-  .circle {
-    fill: var(--rec-color);
-    width: 10px;
-    height: 10px;
-    background-color: var(--rec-color);
-    border-radius: 50%;
-    margin-left: 50px;
-    margin-top: -18px;
-  } 
+.decorated-zone::before {
+  border-top: 1px solid var(--text-title-color);
+  border-right: 1px solid var(--text-title-color);
 }
 
-
-@media screen and (max-width: 376px) {
-  .circle {
-    fill: var(--rec-color);
-    width: 10px;
-    height: 10px;
-    background-color: var(--rec-color);
-    border-radius: 50%;
-    margin-left: 68px;
-    margin-top: -17px;
-  }
+.decorated-zone::after {
+  border-bottom: 1px solid var(--text-title-color);
+  border-left: 1px solid var(--text-title-color);
 }
