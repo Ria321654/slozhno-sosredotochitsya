@@ -116,7 +116,7 @@
 }
 
 .section-intro__text a:hover {
-  border-bottom: 
+  border-bottom: 1px solid var(--text-color);
   border-top:none;
   border-left:none;
   border-right: none;
